@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Atividade 06 </title>
+
+    <style>
+        form{
+            width: 600px;
+            margin: 40px auto;
+            text-align: center;
+        }
+
+        img{
+            margin-bottom: 50px;
+        }
+
+        input{
+            margin-bottom: 10px;
+        }
+    </style>
+
+    <script>
+
+        function mensagem(){
+
+            let valor = document.getElementById("valor").value;
+            
+        
+            document.write("O antecessor é " + (numero-1) + "<br> O sucessor é " + (numero+1))
+
+        }
+
+
+    </script>
+
+</head>
+<body>
+    
+    <form>
+        <input type="text" id="valor"   placeholder="Valor"   class="form-control">
+         
+        <input type="button" value="Enviar" class="btn btn-primary" onclick="mensagem()">
+    </form>
+
+
+
+</body>
+</html>
+
+<!-- 6º Será pedido um número, retorne o sucessor e o antecessor. -->

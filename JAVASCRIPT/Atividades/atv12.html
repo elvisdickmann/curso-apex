@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 12</title>
+
+    <script>
+        let ladoDireito = prompt("Informe o lado direito");
+        let ladoEsquerdo = prompt("Informe o lado esquerdo");
+        let ladoInferior = prompt("Informe o lado inferiror");
+
+        //Condicional
+        if((ladoDireito == ladoEsquerdo) && (ladoEsquerdo == ladoInferior)){
+            document.write("Equilátero")
+        }else if((ladoDireito != ladoEsquerdo) && (ladoEsquerdo != ladoInferior)){
+            document.write("Escaleno")
+        }else{
+            document.write("Isósceles")
+        }
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+
+<!-- 12º Peça três lados, cada um corresponde a um lado do triângulo, em seguida retorne o tipo de triângulo:
+a) Dois lados iguais e um diferente - Isósceles;
+b) Três lados iguais - Equilatero;
+c) Três lados diferentes - Escaleno. -->

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATIVIDADE 08</title>
+   
+    <script>
+
+        // Obter velocidade do veículo
+        let vv = prompt("Informe a velocidade do veículo")
+
+        // Obter velocidade da pista
+        let vp = prompt("Informe a velocidade máxima da pista")
+
+        let calculo = vv - vp
+
+        if (calculo <= 0) {
+            alert("Bom motorista");
+        } else if (calculo <= 10) {
+            alert("Multa de R$50,00");
+        } else if (calculo <= 20) {
+            alert("Multa de R$100,00")
+        } else {
+            alert("Multa de R$200,00");
+        }
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<!-- 8º Informe a velocidade máxima permitida em uma via e a velocidade do veículo, retorne a situação do motorista:
+a) Caso o veículo esteja com a velocidade menor ou igual a máxima permitida, retorne BOM MOTORISTA;
+b) Caso o veículo esteja trafegando até 10km acima do máximo haverá uma multa de R$50,00;
+b) Caso o veículo esteja trafegando entre 11km e 20km acima do máximo haverá uma multa de R$100,00;
+b) Caso o veículo esteja trafegando acima de 20km haverá uma multa de R$200,00. -->

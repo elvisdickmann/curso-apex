@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> PROMISE </title>
+
+    <script>
+        // promise calculo 1
+        function calculo1(numero1, numero2){
+            return new Promise((acerto, erro) => {
+                acerto(numero1 + numero2);
+            })
+        }
+
+        // promise calculo 2
+        function calculo2(numero){
+            return new Promise((acerto, erro) => {
+                acerto(numero * 2);
+            })           
+        }
+
+
+        // EXECUTAR CALCULOS
+        async function executar(){
+            let valor1 = await calculo1(5, 10).then((retorno) => {return retorno});
+            let valor2 = await calculo2(valor1).then((retorno) => {return retorno});
+
+            document.write(valor2);
+            
+        }
+
+        executar();
+        
+       
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 2</title>
+
+    <script>
+        function Soma() {
+     let num1 = parseFloat(document.getElementById("num1").value);
+     let num2 = parseFloat(document.getElementById("num2").value);
+     let media = (num1+num2) 
+     document.getElementById("Retorno").innerText=("A soma dos valores é: " + media)
+        }
+    </script>
+
+    <style> 
+
+
+
+    </style>
+</head>
+<body>
+
+    <form>
+        <input type="num1" placeholder="     " id="num1" class="form-control">
+        <input type="num2" placeholder="     " id="num2" class="form-control">
+        <input type="button" value="Enviar" class="btn btn-primary" onclick="Soma()">
+    </form>
+
+    <p id="Retorno"></p>
+    
+</body>
+</html>
+<!-- 2º Peça dois números, faça a soma e exiba o resultado. -->

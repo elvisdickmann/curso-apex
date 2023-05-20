@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16 - Async Await</title>
+
+    <script>
+
+        // Obter a primeira geração
+        let geracao1 = async () => {
+
+            for(let i=1; i<152; i++){
+                let requisicao = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}`);
+                let pokemon = await requisicao.json();
+                console.log(pokemon.name);
+            }
+
+        }
+
+        // Obter a primeira geração
+        let geracao2 = async () => {
+
+            for(let i=152; i<251; i++){
+                let requisicao = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}`);
+                let pokemon = await requisicao.json();
+                console.log(pokemon.name);
+            }
+
+        }
+
+        // Executar de maneira assíncrona
+        let executar = async () => {
+
+            let pokemons_1 = await geracao1().then(pokemons => {return pokemons});
+            let pokemons_2 = await geracao2().then(pokemons => {return pokemons});
+
+            console.log(pokemons_1);
+            console.log(pokemons_2);
+        }
+
+        executar();
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

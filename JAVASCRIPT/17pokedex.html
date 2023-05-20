@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> POKÉDEX </title>
+
+    <style>
+        #lista{
+            display: flex;
+            flex-wrap: wrap;
+        
+        }
+
+        #lista div{
+            border: solid 1px black;
+            width: 15%;
+            margin: 0.5%;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+    </style>
+
+    <script>
+        
+        //OBTER POKEMONS DA API
+        let requisicao = async() => {
+
+            //OBTER ELEMENTO LISTA
+            let lista = document.getElementById("lista");
+
+
+            // Fetch
+            for(let i=1; i<152; i++) {
+
+            let retorno = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}`);
+            let dados = await retorno.json();
+
+            let caixa = document.createElement("div");
+            let imagem = document.createElement("img");
+            let paragrafo = document.createElement("p");
+
+            imagem.src = dados.sprites.front_default;
+            paragrafo.append(dados.name);
+
+            caixa.appendChild(imagem);
+            caixa.appendChild(paragrafo);
+
+            lista.appendChild(caixa);
+        }
+    }
+
+    </script>
+</head>
+<body onload="requisicao()">
+    <div id="lista">
+
+
+
+    </div>
+
+   
+    
+</body>
+</html>

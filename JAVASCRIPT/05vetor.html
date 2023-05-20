@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05 - VETOR</title>
+
+    <script>
+        // vetor nomes
+        let nomes = ['Alessandra' , 'Andressa' , 'Bruna' , 'Ellen' , 'Tsubaza'];
+
+        // visualizar vetor
+        //document.write(nomes);
+        //console.log(nomes);
+
+
+        // obter lista
+        function listar() {
+            let lista = document.getElementsByTagName("ul") [0];
+
+            let indice = 0;
+            while(indice < nomes.length){
+
+                //criar um elemento na lista
+            let elemento = document.createElement("li");
+
+               //adicionar nome ao elemento
+            let texto = document.createTextNode(nomes[indice])
+            elemento.appendChild(texto);
+
+                //adicionar elemento li na lista
+            lista.appendChild(elemento);
+                
+                //  incremento
+                indice ++;
+
+            }
+
+
+
+          
+}
+    </script>
+</head>
+<body onload="listar()">
+
+    <ul>
+        
+
+    </ul>
+    
+</body>
+</html>

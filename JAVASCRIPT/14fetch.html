@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch</title>
+
+    <script>
+
+        function pesquisar() {
+
+            // obter cep digitado
+            let cep = document.getElementById("cep").value;
+
+            // Fetch
+            fetch(`https://viacep.com.br/ws/${cep}/json/`)
+                .then(retorno => retorno.json())
+                .then(retorno_convertido => {
+                    document.getElementById("estado").innerText = `Estado: ${retorno_convertido.uf}`;
+                    document.getElementById("cidade").innerText = `Cidade: ${retorno_convertido.localidade}`;
+                    document.getElementById("bairro").innerText = `Bairro: ${retorno_convertido.bairro}`;
+                    document.getElementById("logradouro").innerText = `Logradouro: ${retorno_convertido.logradouro}`;
+                })
+
+                .catch(() => {alert("CEP inválido!")})
+        }
+    
+    </script>
+</head>
+
+<body>
+    <input type="text" id="cep">
+    <input type="button" value="Pesquisar" onclick="pesquisar()">
+
+    <hr>
+
+    <p id="estado"></p>
+    <p id="cidade"></p>
+    <p id="bairro"></p>
+    <p id="logradouro"></p>
+
+
+</body>
+
+</html>

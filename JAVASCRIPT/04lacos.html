@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 04 - LAÇOS DE REPETIÇOES </title>
+
+
+    <script>
+        // Function calculo
+
+        function calculo() {
+
+            // obter numero informado
+
+            let numero = document.getElementById("numero").value;
+
+            // limpar conteudo da div
+            document.getElementById("tabuada").innerHTML = "";
+
+            //LAÇO DE REPETICÃO
+            
+            for(let indice = 0; indice < 11; indice ++)
+            document.getElementById("tabuada").innerHTML += numero + " X " + indice + " = " + (numero*indice) + "<hr>";
+            
+        }
+
+    </script>
+</head>
+<body>
+    <input type="number" placeholder="Informe um número" id="numero">
+    <button onclick="calculo()">Gerar tabuada</button>
+
+    <div id="tabuada"></div>
+
+
+    
+</body>
+</html>

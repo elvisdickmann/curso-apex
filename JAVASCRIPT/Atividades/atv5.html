@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Atividade 05 </title>
+
+    <script>
+        function mensagem(){
+        let valor = document.getElementById("valor").value;
+        let moeda = parseInt(document.getElementById("moeda").value);
+
+        if (moeda == 1) {
+            document.getElementById("texto").innerText = "R$ " + (valor * 5);
+            }else{
+            document.getElementById("texto").innerText = "R$ " + (valor / 5);
+        }
+    }
+    </script>
+
+    <style>
+           form,
+        .texto {
+            align-items: center;
+            margin: 50px auto;
+            width: 600px;
+        }
+
+        form input {
+            margin: 40px;
+            padding: 20px;
+        }
+        
+        
+    </style>
+</head>
+
+<body>   
+    <form>
+        <input type="valor" placeholder=" " id="valor" class="form-control"> 
+        <select name="moeda" id="moeda"> 
+            <option value= "1"> Dólar   </option>
+            <option value= "2"> Real    </option>
+        </select>
+        <input type="button" value="Enviar" class="btn btn-dark" onclick="mensagem()">
+    </form>
+    <h1 id="texto"></h1>
+    
+        
+    </div>
+
+
+</body>
+
+</html>
+
+<!-- 5º Criar um sistema onde o cliente informa um valor e o tipo de conversão (Real para Dólar ou Dólar para Real), retorne o valor informado convertido. -->

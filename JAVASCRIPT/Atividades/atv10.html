@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 10</title>
+
+
+    <script>
+
+        // Obter a hora
+        var hora = parseInt(prompt("Informe o horário de Brasília"))
+
+        // Obter o local
+        var local = prompt("Informe o país que deseja saber o horário \n1)México \n2)Japão \n3)Inglaterra")
+
+        // Condicional
+        var horaConvertida
+        if (local == 1) {
+            horaConvertida = (hora - 3)
+        } else if (local == 2) {
+            horaConvertida = (hora + 12)
+        } else {
+            horaConvertida = (hora + 3)
+        }
+
+        // Caso o horário passe de 23
+        if (horaConvertida > 23) {
+
+            // Caso a hora seja exatamente 24
+            if (horaConvertida == 24) {
+                alert("0:00")
+            } else {
+                alert((horaConvertida - 24) + ":00")
+            }
+
+        } else {
+            alert(horaConvertida + ":00")
+        }
+
+
+
+    </script>
+</head>
+
+<body>
+
+
+
+</body>
+
+</html>
+
+<!-- 10º Criar uma lista com três cidades em países diferentes, exemplo: São Paulo, Tóquio e Cidade do México, informe a hora atual (apenas horas, não precisa informar os minutos), retorne o horário naquele país escolhido. -->

@@ -1,0 +1,22 @@
+/* FORMULARIO */
+form{
+    width: 900px;
+    margin: 40px auto;
+    text-align: center;
+}
+input[type='button'] {
+    margin-top: 20px;
+}
+
+#btnAlterar,
+#btnRemover,
+#btnCalcelar{
+    display: none;
+}
+
+/* TABELA*/
+.table{
+    width: 700px;
+    margin: 40px auto;
+}
+
