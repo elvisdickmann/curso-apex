@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>--- LOCAL-STORAGE ---</title>
+    <script>
+        //  ****LOCAL STORAGE : DADOS FICAM ARMAZENADOS EM CACHE   visiveis no inspecionar na aba chrome f12****
+        //  **SESSION STORAGE: dados ficam armazenados enquanto o navegador estiver em funcionamento***
+
+
+
+        // ~~SALVAR INFORMAÇÃO DO LOCAL STORAGE~~ 
+        // localStorage.setItem('nome', 'Elvis');
+
+        //  ~~EXIBIR VALOR DO LOCAL STORAGE~~ 
+        // document.write(localStorage.getItem('nome'));
+
+        // ~~REMOVER OBJETO DO LOCAL STORAGE~~
+        // localStorage.removeItem('nome');
+
+        //  ~~ JSON ~~
+        let pessoas = [
+            { 'nome': 'Elvis', 'idade': 29 },
+            { 'nome': 'Ozzy', 'idade': 3 }
+        ];
+
+        //  ~~ ADICIONAR JSON NO LOCAL STORAGE ~~ 
+        localStorage.setItem('vetor', JSON.stringify(pessoas));
+
+        // ~~ EXTRAIR JSON DO LOCAL STORAGE ~~ 
+        let obterVetor = localStorage.getItem('vetor');
+        console.table(JSON.parse(obterVetor));
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

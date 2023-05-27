@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>--- TEXTO ---</title>
+    <script>
+        let teclado = () => {
+
+            // ~~ OBTER ELEMENTOS HTML ~~ 
+            let caixa = document.getElementById("caixa");
+            let texto1 = document.getElementById("texto1");
+            let texto2 = document.getElementById("texto2");
+            let quantidade = document.getElementById("quantidade");
+
+            //  ~~ EXIBIR TEXTO DIGITADO NOS PARÁGRAFOS ~~ 
+            texto1.innerText = caixa.value.toLowerCase();
+            texto2.innerText = caixa.value.toUpperCase();
+
+
+            //  ~~ EXIBIR A QUANTIDADE DE CATACTERES DIGITADOS ~~
+            if (caixa.value.length == 0) {
+                quantidade.innerText = "Digite alguma coisa...";
+            } else if (caixa.value.length == 1) {
+                quantidade.innerText = "Foi digitado apenas um caratere.";
+            } else {
+                quantidade.innerText = "Foram digitados " + caixa.value.length + " caracteres.";
+            }
+
+        }
+
+        let exemplo2 = () => {
+            // ~~ OBTER o Elemento HTML palavra ~~ 
+            let palavra = document.getElementById("palavra");
+
+            // ~~ TERMO CONTENDO UMA PALAVRA ~~ 
+            let termo = "Tecnologia";
+
+            // ~~ EXIBIR O TERMO NO ELEMENTO PALAVRA ~~ 
+            // palavra.innerText = termo.substr(2);
+            // palavra.innerText = termo.substr(2, 2);
+            // palavra.innerText = termo.substring(0, 5);
+        }
+
+        let exemplo3 = () => {
+
+            // ~~CRIAR VARIAVEL~~
+            let termo = "Tecnologia"
+
+            //  ~~OBTER O ELEMENTO HTML letras~~
+            let letras = document.getElementById("letras");
+
+            // ~~EXTRAIR UMA LETRA APENAS DA VARIAVEL termo~~
+            // letras.innerText = termo.charAt(1);
+
+            // ~~EXTRAIR TODAS AS LETRAS DO termo~~
+            for(let indice=0; indice<termo.length; indice++){
+                letras.innerHTML += (indice+1) +"º posição - "+ termo.charAt(indice) + "<br>";
+            }
+
+        }
+    </script>
+</head>
+
+<body onload="exemplo3()">
+
+    <!-- ~~EXEMPLO 01~~  -->
+    <input type="text" id="caixa" onkeyup="teclado()">
+    <p id="texto1"></p>
+    <p id="texto2"></p>
+    <p id="quantidade"></p>
+
+    <!-- ~~EXEMPLO 02 -->
+    <p id="palavra"></p>
+    <hr>
+
+    <!-- ~~EXEMPLO 03 -->
+    <p id="letras"></p>
+
+
+
+</body>
+
+</html>
